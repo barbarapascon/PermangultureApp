@@ -3,8 +3,8 @@
     <ion-title class="ion-text-center">
       <img src="assets/mangowhite.png">
       <span>Barbara</span>
-      <ion-button  color="light" size="small" fill="clear">
-        <ion-icon slot="icon-only" name="arrow-down-outline"></ion-icon>
+      <ion-button  (click)="toogleBlocks()" color="light" size="small" fill="clear">
+        <ion-icon slot="icon-only" [name]="initialStep > 0 ? 'arrow-up-outline' : 'arrow-down-outline'"></ion-icon>
       </ion-button>
     </ion-title>
   </ion-toolbar>
@@ -19,10 +19,79 @@
  
 
   </div>
+  <ion-list lines="full" >
+    <ion-item *ngFor="let item of items" detail>
+      <ion-icon slot="start" [name]="item.icon"></ion-icon>
+      <ion-label>{{item.text}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button class="logout" color="light" expand="block" fill="outline">
+SAIR DA CONTA 
+ </ion-button>
 </div>
+
+<div #blocks class="blocks">
+<ion-card>
+  <ion-item class="ion-margin-vertical cash" lines="none">
+    <ion-icon slot="start" name="card-outline"></ion-icon>
+    <ion-label>TAREFAS</ion-label>
+  </ion-item>
+  <ion-card-content class="ion-no-padding">
+    <div class="cash ion-margin-vertical ion-padding">
+<span class="blue">Tarefas de hoje: </span>
+<span> pegar terra</span>
+    </div>
+    <div class="ion-padding-vertical footer">
+      <ion-item color="light" lines="none" detail>
+        <ion-icon slot="start" name="pizza-outline"></ion-icon>
+        <ion-label class="ion-text-wrap">ultima tarefa realizada: abubo de tomates</ion-label>
+      </ion-item>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-item class="ion-margin-vertical cash" lines="none">
+    <ion-icon slot="start" name="card-outline"></ion-icon>
+    <ion-label>Assistente Virtual</ion-label>
+  </ion-item>
+  <ion-card-content class="ion-no-padding">
+    <div class="cash ion-margin-vertical ion-padding">
+<span class="blue">Bom dia, hoje vc tem as seguintes tarefas: </span>
+<span> pegar terra</span>
+    </div>
+    <div class="ion-padding-vertical footer">
+      <ion-item color="light" lines="none" detail>
+        <ion-icon slot="start" name="pizza-outline"></ion-icon>
+        <ion-label class="ion-text-wrap">ultima tarefa realizada: abubo de tomates</ion-label>
+      </ion-item>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-item class="ion-margin-vertical cash" lines="none">
+    <ion-icon slot="start" name="card-outline"></ion-icon>
+    <ion-label>HORTAS E PERMACULTORES por perto</ion-label>
+  </ion-item>
+  <ion-card-content class="ion-no-padding">
+    <div class="cash ion-margin-vertical ion-padding">
+<span class="blue">Tarefas de hoje: </span>
+<span> pegar terra</span>
+    </div>
+    <div class="ion-padding-vertical footer">
+      <ion-item color="light" lines="none" detail>
+        <ion-icon slot="start" name="pizza-outline"></ion-icon>
+        <ion-label class="ion-text-wrap">ultima tarefa realizada: abubo de tomates</ion-label>
+      </ion-item>
+    </div>
+  </ion-card-content>
+</ion-card>
+</div>
+
 </ion-content>
 <ion-footer class="ion-no-border" >
-  <ion-toolbar color="primary">
+  <ion-toolbar class="ion-no-margin ion-padding-vertical" color="primary">
     <ion-slides [options]="slidesOptions">
       <ion-slide *ngFor="let option of options">
         <div class="container ion-text-left">
