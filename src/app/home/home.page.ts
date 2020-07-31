@@ -9,11 +9,11 @@ import {Animation, AnimationController, Platform } from '@ionic/angular';
 export class HomePage {
   @ViewChild('blocks') blocks:any;
 public options:Array<any>=[
-  { icon: 'person-add-outline',text: 'Plantas'},
-  { icon: 'phone-portrait-outline',text: 'Problemas'},
-  { icon: 'person-add-outline',text: 'Hortas comunitarias'},
-  { icon: 'help-circle-outline',text: 'Tarefas de hoje'},
-  { icon: 'barcode-outline',text: 'Assistente online'}
+  { icon: 'leaf-outline',text: 'Plantas'},
+  { icon: 'bug-outline',text: 'Problemas'},
+  { icon: 'map-outline',text: 'Hortas comunitarias'},
+  { icon: 'list-outline',text: 'Tarefas de hoje'},
+  { icon: 'flower-outline',text: 'Assistente online'}
 ];
 public slidesOptions: any ={slidesPerView:3, freeMode:true}
 

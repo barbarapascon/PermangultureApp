@@ -19,6 +19,8 @@ ion-header{
   }
 }
 ion-content{
+
+  --background:  url(/../assets/gradient.png) 0 0/100% 100% no-repeat;
   .background{
     opacity:0;
     .bank-information{
@@ -37,6 +39,7 @@ ion-content{
       margin-top: 32px;
       background: transparent;
       ion-item{
+       
         color:#fff;
         --background: transparent;
         --detail-icon-opacity:1;
@@ -62,6 +65,8 @@ ion-content{
     ion-card{
       .cash{
         span{
+          margin: 2px;
+          min-width: 250px;
           &.value
           {
             font-size:30px;
@@ -78,6 +83,28 @@ ion-content{
         }
        
       }
+      ion-card-content{
+         .dona-flora{
+            max-width: 25%;
+            margin-left: 2px;
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            margin: 0 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .text-flora{
+              margin-left: 2px;
+              width: 100%;
+              padding: 10px;
+              margin: 0 5px;
+              display: flex;
+              flex-direction: column;
+            }
+          }
+      }
+     
       .footer{
         background: --ion-color-primary-tint;
       }
@@ -91,11 +118,13 @@ ion-content{
   }
 }
 ion-footer{
+ 
   ion-slide{
+    //text-align: center;
     .container{
       width: 100%;
       height: 100px;
-      background: var(--ion-color-primary-tint);
+      background: var(--ion-color-secondary);
       padding: 10px;
       margin: 0 5px;
       display: flex;
