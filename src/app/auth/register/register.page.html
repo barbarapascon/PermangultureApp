@@ -1,11 +1,24 @@
-<ion-content  color="primary">
-  <form  #form="ngForm" (ngSubmit)="register(form)">
+
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      <img src="assets/mag.png">
+    
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-class" color="primary">
+  <ion-card>
+     <form  #form="ngForm" (ngSubmit)="register(form)">
     <ion-grid>
       <ion-row color="primary" justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-          <div text-center>
-            <h3>Create your account!</h3>
-          </div>
+          <ion-item class="ion-margin-vertical cash" lines="none">
+            <ion-icon slot="start" name="person-add-outline"></ion-icon>
+            <ion-label>CADASTRE-SE</ion-label>
+          </ion-item>
+         
           <div padding>
             <ion-item>
               <ion-input  name="name" type="text" placeholder="Name" ngModel required></ion-input>
@@ -27,4 +40,6 @@
       </ion-row>
     </ion-grid>
   </form>
+  </ion-card>
+ 
 </ion-content>
