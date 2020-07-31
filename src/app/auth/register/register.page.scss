@@ -5,7 +5,9 @@ ion-content{
 ion-header{
     ion-toolbar{
       --min-height:100px;
-  
+    
+--background: transparent;
+--ion-color-base: transparent !important;
       ion-title{
         align-items: flex-end;
         img{
