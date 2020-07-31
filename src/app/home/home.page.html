@@ -70,7 +70,7 @@
     </ion-card>
 
     <ion-card>
-      <ion-item class="ion-margin-vertical cash" lines="none">
+      <ion-item  [routerLink]="['/chat']"class="ion-margin-vertical cash" lines="none">
         <ion-icon slot="start" name="flower-outline"></ion-icon>
         <ion-label>Assistente Virtual Dona Flora</ion-label>
       </ion-item>
@@ -90,7 +90,7 @@
         <div class="ion-padding-vertical footer">
           <ion-item color="light" lines="none" detail>
             <ion-icon slot="start" name="paper-plane-outline"></ion-icon>
-            <ion-label class="ion-text-wrap">ultima tarefa realizada: abubo de tomates</ion-label>
+            <ion-input type="text" placeholder="Digite sua mensagem..." [(ngModel)]="mensagem"></ion-input>
           </ion-item>
         </div>
       </ion-card-content>
