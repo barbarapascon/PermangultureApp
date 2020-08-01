@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'plants-description',
     loadChildren: () => import('./plants-description/plants-description.module').then( m => m.PlantsDescriptionPageModule)
   },
+  {
+    path: 'speech',
+    loadChildren: () => import('./speech/speech.module').then( m => m.SpeechPageModule)
+  },
 ];
 
 @NgModule({
